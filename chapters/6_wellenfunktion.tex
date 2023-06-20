@@ -1,0 +1,76 @@
+Randbedingungen \cite[Kap. 4.1.2]{qm}
+\begin{itemize}
+    \item $\psi(x)$ immer stetig
+    \item unendliches Potential $\Rightarrow$ $\psi(\vec{x})=0$
+    \item endliches Potential $\Rightarrow$ $\psi'(x)$ stetig
+    \item unendliche Potentialkante $\Rightarrow$ $\psi'(x)$ unstetig
+\end{itemize}
+Aufenthaltswahrscheinlichkeitsdichte \cite[Glg. A.97]{qm}
+\begin{equation*}
+	\rho(\vec{x}, t) = |\psi(\vec{x}, t)|^2
+\end{equation*}
+Parität \cite[S. 105]{qm}
+\begin{itemize}
+    \item Bei einem symmetrischen Potential können die Eigenfunktionen von $\hat{H}$ gerade \& ungerade gewählt werden.
+\end{itemize}
+Reelle Wellenfunktionen \cite[S. 111]{qm}
+\begin{equation*}
+	\psi(\vec{x},t)\in\mathbb{R} \qquad \Rightarrow \qquad \rho(\vec{x},t)=\rho(\vec{x}) \qquad \Rightarrow \qquad \vec{j}(\vec{x},t)=\vec{0}
+\end{equation*}
+
+\section{Eindimensionale Potentialprobleme}
+
+Entartung \cite[Kap. 4.6.3]{qm}
+\begin{itemize}
+    \item Gebundene Zustände im Eindimensionalen sind nie entartet.
+\end{itemize}
+Knotensatz \cite[Kap. 4.6.4]{qm}
+\begin{itemize}
+    \item Die Wellenfunktion von $E_n$ hat $n$ Nullstellen im Eindimensionalen. ($\cdots<E_n<E_{n+1}<\cdots, \ n\in\mathbb{N}_0$)
+\end{itemize}
+Realität \cite[Kap. 4.6.5]{qm}
+\begin{itemize}
+    \item Die Wellenfunktionen der gebundenen Eigenzustände eines eindimensionalen Potentialproblems ohne Magnetfeld können immer reell gewählt werden.
+\end{itemize}
+
+\subsection{Spezielle Potentiale}
+
+Konstantes Potential $V(x)=V$ \cite[Glg. 4.5]{qm}
+\begin{gather*}
+	\psi(x)=ae^{+ikx}+be^{-ikx}=ae^{+\kappa x}+be^{-\kappa x} \\
+	k=\sqrt{\frac{2m}{\hbar^2}(E-V)} \qquad \kappa=\sqrt{\frac{2m}{\hbar^2}(V-E)}=ik
+\end{gather*}
+Unendlicher Potentialtopf $V(x)=\begin{cases} V_0 & x\in[0,L] \\ \infty & x\not\in[0,L] \end{cases}$ \cite[Glg. 4.7-4.9]{qm}
+\begin{equation*}
+	\psi_n(x)=\begin{cases}
+		\sqrt{\frac{2}{L}}\sin k_nx & x\in[0,L] \\
+		0                           & x\not\in[0,L]
+	\end{cases} \qquad k_n=\frac{n\pi}{L} \qquad E_n=\frac{\hbar^2\pi^2}{2mL^2}n^2+V_0 \qquad n\in\mathbb{N}^+
+\end{equation*}
+Potentialbarriere $V(x)=\begin{cases} V_0 & x\in[-L/2,+L/2] \\ 0 & x\not\in[-L/2,+L/2] \end{cases}$ \cite[Glg. 4.53, 4.48, 4.49, 4.54]{qm}
+\begin{gather*}
+	\psi(\vec{x},t) = \begin{cases}
+		e^{+ikx}+Ae^{-ikx} & x\leq-L/2 \\
+		B_1e^{+\kappa x} + Be^{-\kappa x} & -L/2\leq x\leq+L/2 \\
+		Ce^{+ikx} & +L/2\leq x
+	\end{cases} \\
+	\begin{aligned}
+		k &= \sqrt{\frac{2mE}{\hbar^2}} & \kappa &= \sqrt{\frac{2m}{\hbar^2}(V_0-E)} \\
+		A &= \frac{1}{Z}e^{-ikL}(1+\rho^2)\sinh\kappa L & B_1 &= -\frac{1}{Z}e^{-ikL/2}(1-i\rho)e^{-\kappa L/2} \\
+		C &= \frac{1}{Z}i2\rho e^{-ikL} & B_2 &= +\frac{1}{Z}e^{-ikL/2}(1+i\rho)e^{+\kappa L/2} \\
+			\rho &= \frac{\kappa}{k} & Z &= (1-\rho^2)\sinh\kappa L + 2i\rho\cosh\kappa L \\
+		T &= |C|^2 & R &= |A|^2
+	\end{aligned}
+\end{gather*}
+
+\section{Basen}
+
+Hermite-Funktionen \& Hermite-Polynome \begin{refsection}\footfullcite[Bsp. 2.16ii]{funki}\end{refsection}
+\begin{equation*}
+	h_n(x)=\frac{e^{-\frac{x^2}{2}}}{\sqrt{2^nn!\sqrt{\pi}}}H_n(x) \qquad H_n(x)=(-1)^ne^{x^2}\frac{d^n}{dx^n}e^{-t^2}
+\end{equation*}
+Kugelflächenfunktionen \& zugeordnete Legendre-Polynome \cite[Glg. 6.59]{qm}
+\begin{gather*}
+	\braket{\theta,\varphi|l,m} = Y_l^m(\theta,\varphi) = (-1)^m\sqrt{\frac{(2l+1)(l-m)!}{4\pi(l+m)!}}e^{im\varphi}P_l^m(\cos\theta) \\
+	P_l^m(\cos\theta) = \frac{\sin^m\theta}{2^ll!}\frac{d^{l+m}}{d(\cos\theta)^{l+m}}\sin^{2l}\theta
+\end{gather*}

@@ -1,0 +1,32 @@
+
+\begin{itemize}
+    \item Im diskreten Fall sind die Integrale durch Summen und die Delta-Distributionen durch Kronecker-Deltas zu ersetzen.
+    \item Für $n$ ist die Dimensionalität zu verwenden.
+\end{itemize}
+Spektraldarstellung \cite[Glg. A.96, A.99, A.127, A.128]{qm}
+\begin{align*}
+	\hat{\vec{Q}} &= \int_{\mathbb{R}^n}\vec{x}\ketbra{\vec{x}}{\vec{x}}d\vec{x} & \hat{\vec{Q}}\ket{\vec{x}} &= \vec{x}\ket{\vec{x}} \\
+	\hat{\vec{P}} &= \int_{\mathbb{R}^n}\vec{p}\ketbra{\vec{p}}{\vec{p}}d\vec{p} & \hat{\vec{P}}\ket{\vec{p}} &= \vec{p}\ket{\vec{p}}
+\end{align*}
+Basis (Orthonormalität \& Vollständigkeit) \cite[Glg. A.85, A.86, A.122, A.124, A.106, A.108]{qm}
+\begin{align*}
+	\braket{\vec{x}|\vec{y}} &= \delta(\vec{x}-\vec{y}) & \int_{\mathbb{R}^n}\ketbra{\vec{x}}{\vec{x}}d\vec{x} &= 1 \\
+	\braket{\vec{p}|\vec{q}} &= \delta(\vec{p}-\vec{q}) & \int_{\mathbb{R}^n}\ketbra{\vec{p}}{\vec{p}}d\vec{p} &= 1 \\
+	\braket{\vec{k}|\vec{l}} &= \delta(\vec{k}-\vec{l}) & \int_{\mathbb{R}^n}\ketbra{\vec{k}}{\vec{k}}d\vec{k} &= 1
+\end{align*}
+Wirkung untereinander \cite[Glg. A.129, S. A.56]{qm}
+\begin{equation*}
+	\braket{\vec{x}|\vec{p}} = \frac{1}{\sqrt{2\pi\hbar}^n}e^{\frac{i}{\hbar}\vec{x}\vec{p}} \qquad \braket{\vec{x}|\vec{k}} = \frac{1}{\sqrt{2\pi}^n}e^{i\vec{x}\vec{k}}
+\end{equation*}
+Kommutator \cite[Glg. A.151, A.152, A.153]{qm}
+\begin{equation*}
+	\left[\hat{Q}_j,\hat{P}_k\right] = i\hbar\delta_{ij} \qquad \left[\hat{Q}_j,f(\hat{\vec{Q}},\hat{\vec{P}})\right] = i\hbar\frac{\partial}{\partial\hat{P}_j}f(\hat{\vec{Q}},\hat{\vec{P}}) \qquad \left[f(\hat{\vec{Q}},\hat{\vec{P}}),\hat{P}_j\right] = i\hbar\frac{\partial}{\partial\hat{Q}_j}f(\hat{\vec{Q}},\hat{\vec{P}})
+\end{equation*}
+Wirkung auf Wellenfunktion \cite[Glg. A.83, A.125, A.113]{qm}
+\begin{equation*}
+	\braket{\vec{x}|f} = f(\vec{x}) \qquad \braket{\vec{p}|f} = \frac{1}{\sqrt{\hbar}^n}\mathcal{F}[f](\vec{p}) \qquad \braket{\vec{k}|f} = \mathcal{F}[f](\vec{k})
+\end{equation*}
+Darstellung in anderen Räumen \cite[Glg. A.132, eigene Folgerung, S. A.60]{qm}
+\begin{equation*}
+	\hat{\vec{P}} = -i\hbar\int_{\mathbb{R}^n}\ket{\vec{x}}\vec{\nabla}\bra{\vec{x}}d\vec{x} \qquad \hat{\vec{Q}} = +i\hbar\int_{\mathbb{R}^n}\ket{\vec{p}}\vec{\nabla}\bra{\vec{p}}d\vec{p} \qquad \ket{\vec{p}} = \frac{1}{\sqrt{\hbar}^n}\ket{\vec{k}}
+\end{equation*}

@@ -1,0 +1,78 @@
+\section{Nöthersches Theorem}
+
+Aussage \& Beispiele \cite[S. 192]{qm}
+\begin{align*}
+		\text{System invariant unter $e^{-\frac{i}{\hbar}\hat{A}}$} &&\Leftrightarrow&&& \left[\hat{H},\hat{A}\right]=0 \\
+		\text{Zeitinvarianz} &&\Leftrightarrow&&& \text{Energieerhaltung} \\
+		\text{Translationsinvarianz} &&\Leftrightarrow&&& \text{Impulserhaltung} \\
+		\text{Rotationsinvarianz} &&\Leftrightarrow&&& \text{Drehimpulserhaltung}
+\end{align*}
+
+\section{Translationen}
+
+Definition \& Wirkung, Erzeuger \cite[Glg. 6.12, 6.8, 6.11]{qm}
+\begin{equation*}
+	\bra{\vec{x}}\hat{T}_{\vec{a}} = \bra{\vec{x}-\vec{a}} \qquad \hat{T}_{\vec{a}}\ket{\vec{x}} = \ket{\vec{x}+\vec{a}} \qquad \hat{T}_{\vec{a}} = e^{-\frac{i}{\hbar}\hat{\vec{P}}\vec{a}}
+\end{equation*}
+Eigenwerte und -vektoren im Ortsraum \cite[Glg. 6.15]{qm}
+\begin{equation*}
+	\hat{T}_{\vec{a}}\frac{e^{-\frac{i}{\hbar}\vec{p}\vec{a}}}{(2\pi\hbar)^\frac{3}{2}} = e^{-\frac{i}{\hbar}\vec{p}\vec{a}}\frac{e^{-\frac{i}{\hbar}\vec{p}\vec{a}}}{(2\pi\hbar)^\frac{3}{2}}
+\end{equation*}
+Nöther (Translationsinvarianz $\Leftrightarrow$ Impulserhaltung) \cite[Glg. 6.16]{qm}
+\begin{equation*}
+	[\hat{H}, \hat{T}_{\vec{a}}]=0 \qquad \Leftrightarrow \qquad [\hat{H}, \hat{\vec{P}}]=0
+\end{equation*}
+
+\section{Parität}
+
+Definition \cite[Glg. 4.32]{qm}
+\begin{equation*}
+	\hat{S}\ket{\vec{x}} = \ket{-\vec{x}} \qquad \Leftrightarrow \qquad \bra{\vec{x}}\hat{S} = \bra{-\vec{x}}
+\end{equation*}
+Eigengleichung \cite[Glg. 4.33]{qm}
+\begin{equation*}
+	\hat{S}\ket{\psi_s} = s\ket{\psi_s} \qquad s=\begin{cases}
+		+1 & \text{(gerade)} \\
+		-1 & \text{(ungerade)}
+	\end{cases}
+\end{equation*}
+
+\section{Drehungen}
+
+\begin{itemize}
+    \item Alles auch für $\hat{\vec{L}}$ bzw. $\hat{\vec{S}}$ bei spinlosen bzw. punktförmigen Teilchen. \cite[S. 202f]{qm}
+\end{itemize}
+Erzeuger \cite[Glg. 6.22]{qm}
+\begin{equation*}
+    \hat{R}_{\vec{n}}(\varphi) = e^{-\frac{i}{\hbar}\varphi \vec{n} \hat{\vec{J}}}
+\end{equation*}
+Für Spins \cite[Glg. 6.23]{qm}
+\begin{equation*}
+	e^{-\frac{i}{\hbar}\varphi\vec{n}\hat{\vec{S}}} = \cos\frac{\varphi}{2}-i\vec{n}\vec{\sigma}\sin\frac{\varphi}{2}
+\end{equation*}
+Bahndrehimpuls- \& (Gesamt-)Drehimpulsoperator (Definition) \cite[Glg. 6.29, 6.30]{qm}
+\begin{equation*}
+    \hat{\vec{L}} = \hat{\vec{Q}} \times \hat{\vec{P}} \qquad \hat{\vec{J}} = \hat{\vec{L}} + \hat{\vec{S}}
+\end{equation*}
+Leiteroperatoren (Definition) \cite[Glg. 6.35]{qm}
+\begin{equation*}
+    \hat{J}_\pm = \hat{J}_x \pm i \hat{J}_y \qquad \hat{J}_x = \frac{\hat{J}_+ + \hat{J}_-}{2} \qquad \hat{J}_y = \frac{\hat{J}_+ - \hat{J}_-}{2i}
+\end{equation*}
+Wirkung \cite[Glg. 6.52, 6.57, 6.41]{qm}
+\begin{align*}
+	\hat{\vec{J}}^2\ket{j, m} &= \hbar^2j(j+1)\ket{j,m} & \hat{J}_z\ket{j, m} &= \hbar m\ket{j,m} \\
+	\hat{J}_\pm\ket{j, m} &= \hbar\sqrt{j(j+1)-m(m\pm 1)}\ket{j,m\pm 1} & \hat{S}_\pm\ket{\mp z}&=\ket{\pm z} \quad \hat{S}_\pm\ket{\pm z}=0
+\end{align*}
+Eigenschaften \cite[Glg. 6.31, 6.32, 6.36]{qm}
+\begin{gather*}
+	\left[\hat{J}_j, \hat{J}_k\right] = i\hbar \epsilon_{jkl} \hat{J}_l \qquad \hat{\vec{J}} \times \hat{\vec{J}} = i\hbar \hat{\vec{J}} \\
+	\left[ \hat{J}_z, \hat{J}_\pm \right] = \pm \hbar \hat{J}_\pm \qquad \left[ \hat{J}_+, \hat{J}_- \right] = 2\hbar \hat{J}_z \qquad \left[ \hat{\vec{J}}^2, \hat{J}_\pm \right] = 0
+\end{gather*}
+Drehimpulsquantenzahl \& magnetische Quantenzahl des Drehimpulsop. \cite[Tab. 6.1]{qm}
+\begin{equation*}
+    \ket{j,m} \qquad j\in\left\{\frac{n}{2}\mid n\in\mathbb{N}_0\right\} \qquad m\in\left\{-j,\dots,+j\right\}
+\end{equation*}
+``Skalare'' Operatoren und ``Vektor''-Operatoren \cite[Glg. 6.33, 6.34]{qm}
+\begin{equation*}
+	[\hat{\vec{J}},\hat{A}]=0 \qquad [\hat{J}_i,\hat{A}_j]=i\hbar\epsilon_{ijk}\hat{A}_k
+\end{equation*}

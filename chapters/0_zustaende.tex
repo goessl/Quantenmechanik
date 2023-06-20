@@ -1,0 +1,54 @@
+Wahrscheinlichkeit von Messergebnis \cite[Glg. 2.12]{qm}
+\begin{equation*}
+	W(a_j\mid\psi)=|\braket{a_j|\psi}|^2 \qquad \text{wobei} \ A=\sum_ja_j\ketbra{a_j}{a_j}
+\end{equation*}
+Erwartungswert \cite[Glg. 2.16, S. 33]{qm}
+\begin{equation*}
+	\braket{\hat{A}}_\psi = \braket{\psi|\hat{A}|\psi} = \sum_j|\braket{a_j|\psi}|^2a_j
+\end{equation*}
+Gebundenheit \cite[Kap. 4.1.1]{qm}
+\begin{itemize}
+    \item Gebundene Zustände $\Leftrightarrow$ normierbare Eigenzustände von $\hat{H}$
+    \begin{itemize}
+        \item Diskretes Energiespektrum
+    \end{itemize}
+    \item Unebundene Zustände $\Leftrightarrow$ nicht normierbare Eigenzustände von $\hat{H}$
+    \begin{itemize}
+        \item Kontinuierliches Energiespektrum
+    \end{itemize}
+\end{itemize}
+Untere Energieschranke \cite[Glg. 4.31]{qm}
+\begin{equation*}
+	E > \min_{\vec{x}}V(\vec{x})
+\end{equation*}
+
+\section{Teilchenströme}
+
+Wahrscheinlichkeitsstromdichte \& Kontinuität \cite[Glg. 4.38]{qm}
+\begin{gather*}
+	\vec{j} = \frac{\hbar}{m}\text{Im}\ \psi^*(\vec{x},t)\vec{\nabla}\psi(\vec{x},t) \\
+	\frac{\partial}{\partial t}\rho(\vec{x},t) = -\vec{\nabla}\vec{j}(\vec{x},t)
+\end{gather*}
+Transmissions- \& Reflexionskoeffizient \cite[S. 116]{qm}
+\begin{equation*}
+	T + R = 1
+\end{equation*}
+
+\section{Dichteoperator}
+
+Statistischer Operator \cite[Glg. 9.5, 9.9, 9.8]{qm}
+\begin{equation*}
+	\hat{\rho} = \sum_j\rho_j\ketbra{\varphi_j}{\varphi_j} \qquad \tr\hat{\rho}=1 \qquad \braket{\hat{A}}_{\hat{\rho}}=\tr\hat{\rho}\hat{A}
+\end{equation*}
+Hinreichende Charakterisierung eines reinen Zustandes \cite[Glg. 9.10, 9.12, 9.13]{qm}
+\begin{equation*}
+	\hat{\rho}=\ketbra{\psi}{\psi} \qquad \hat{\rho}^2=\hat{\rho} \ \text{(Idempotenz)} \qquad \tr\hat{\rho}=1
+\end{equation*}
+Schrödingergleichung \cite[Glg. 9.17]{qm}
+\begin{equation*}
+	i\hbar\frac{d}{dt}\hat{\rho}(t) = \left[\hat{H},\hat{\rho}(t)\right]
+\end{equation*}
+Reduzierte Dichtematrix \cite[Glg. 9.23]{qm}
+\begin{equation*}
+	\tilde{\rho}_{ij} = \sum_k\rho_{kkij}
+\end{equation*}

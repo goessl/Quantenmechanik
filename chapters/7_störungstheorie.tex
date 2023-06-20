@@ -1,0 +1,64 @@
+\section{Zeitunabhängige Störungstheorie}
+
+\subsection{Nicht entartet}
+
+Grundzustandsenergie durch Variationsansatz \cite[Glg. 5.3]{qm}
+\begin{equation*}
+    E_0 = \min\braket{\psi(\lambda)|\hat{H}|\psi(\lambda)}
+\end{equation*}
+Schrödingersche Störungsrechnung \cite[Glg. 5.15, 5.16]{qm}
+\begin{gather*}
+	    \hat{H} = \hat{H}_0 + \lambda\hat{H}_1 \\
+	    E_n =E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \cdots \qquad \ket{\varphi_n} = \ket{\varphi_n^{(0)}} + \lambda\ket{\varphi_n^{(1)}} + \lambda^2\ket{\varphi_n^{(2)}} + \cdots
+\end{gather*}
+Korrekturen \cite[Glg. 5.19, 5.22, 5.25, 5.23]{qm}
+\begin{align*}
+	E_n^{(1)} &= \braket{\varphi_n^{(0)} | \hat{H}_1 | \varphi_n^{(0)}} & \ket{\varphi_n^{(1)}} &= \sum_{m \neq n} \ket{\varphi_m^{(0)}}\frac{\braket{\varphi_m^{(0)} | \hat{H}_1 | \varphi_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}} \\
+	E_n^{(2)} &= \sum_{m \neq n} \frac{\left| \braket{\varphi_m^{(0)} | \hat{H}_1 | \varphi_n^{(0)}} \right|^2}{E_n^{(0)} - E_m^{(0)}} < 0 & \braket{\varphi_n^{(0)}|\varphi_n^{(1)}} &= 0
+\end{align*}
+
+\subsection{Entartet}
+
+Aufspaltung \cite[S. 169]{qm}
+\begin{gather*}
+	\hat{H}=\hat{H}_0+\lambda\hat{H}_1 \qquad \text{Entartung bei $n\in\mathcal{N}$.} \\
+	\hat{P}=\sum_{n\in\mathcal{N}}\ketbra{\varphi_n}{\varphi_n} \qquad \hat{Q}=\sum_{n\not\in\mathcal{N}}\ketbra{\varphi_n}{\varphi_n}=1-\hat{P} \\\hat{\tilde{H}}_0=\hat{H}_0+\lambda\hat{P}\hat{H}_1\hat{P} \qquad \lambda\hat{\tilde{H}}_1=\lambda\hat{P}\hat{H}_1\hat{Q}+\lambda\hat{Q}\hat{H}_1\hat{P}+\lambda\hat{Q}\hat{H}_1\hat{Q}
+\end{gather*}
+Korrekturen der entarteten Zustände \cite[Glg. 5.37, 5.38, 5.39]{qm}
+\begin{align*}
+	\tilde{E}_n^{(1)} &= 0 & \ket{\tilde{\varphi}_n^{(1)}} &= \sum_{m\not\in\mathcal{N}}\ket{\tilde{\varphi}_m^{(0)}}\frac{\braket{\tilde{\varphi}_m^{(0)}|\hat{H}_1|\tilde{\varphi}_n^{(0)}}}{\tilde{E}_n^{(0)}-\tilde{E}_m^{(0)}} \\
+	\tilde{E}_n^{(2)} &= \sum_{m\not\in\mathcal{N}}\frac{\left|\braket{\tilde{\varphi}_m^{(0)}|\hat{H}_1|\tilde{\varphi}_n^{(0)}}\right|^2}{\tilde{E}_n^{(0)}-\tilde{E}_m^{(0)}}
+\end{align*}
+
+\section{Zeitabhängige Störungstheorie}
+
+Aufspaltung \cite[Glg. 5.40]{qm}
+\begin{equation*}
+	\hat{H}(t) = \hat{H}_0 + \hat{H}_1(t)
+\end{equation*}
+Wechselwirkungsbild \cite[Glg. 5.46, 5.49, 5.48]{qm}
+\begin{align*}
+		\ket{\psi^I(t)} &= \hat{U}_0^\dagger(t,t_0)\ket{\psi(t)} = \hat{U}_0^\dagger(t,t_0)\hat{U}(t,t_0)\ket{\psi(t)} \\
+		\hat{H}_1^I(t) &= \hat{U}_0^\dagger(t,t_0)\hat{H}_1(t)\hat{U}_0(t,t_0) \\
+		i\hbar\frac{d}{dt}\ket{\psi^I(t)} &= \hat{H}_1^I(t)\ket{\psi^I(t)}
+\end{align*}
+Störungsentwicklung von Wellenfunktionen \cite[Glg. 5.52, 5.53, 5.54, 5.57, 5.58, 5.59, 5.62, 5.62]{qm}
+\begin{align*}
+	\ket{\psi^I(t)} &= \sum_{l=0}^\infty\ket{\psi^{I,l}(t)} & i\hbar\frac{d}{dt}\ket{\psi^{I,(l+1)}(t)} &= \hat{H}_1^I(t)\ket{\psi^{I,l}(t)} \\
+	\ket{\psi^{I,0}(t)} &= \ket{\psi(t_0)} & \ket{\psi^{I,(l+1)}(t)} &= -\frac{i}{\hbar}\int_{t_0}^t\hat{H}_1^I(\tau)\ket{\psi^{I,l}(\tau)}d\tau \\
+	\ket{\psi^I(t)} &= \sum_nc_n(t)\ket{\varphi_n} & \ket{\psi^{I,l}(t)} &= \sum_nc_n^{(l)}(t)\ket{\psi_n} \\
+	c_n(t) &= \sum_{l=0}^\infty c_n^{(l)}(t) & c_m^{(l+1)} &= -\frac{i}{\hbar}\sum_n\int_{t_0}^te^{i\omega_{mn}\tau}H_{1,mn}(\tau)c_n^{(l)}(\tau)d\tau \\
+	H_{1,mn}(\tau) &= \braket{\varphi_m|\hat{H}_1^S{\tau}|\varphi_n} & \omega_{mn} &= \frac{\epsilon_m-\epsilon_n}{\hbar}
+\end{align*}
+Übergangsrate bei konstanter Störung \cite[Glg. 5.78]{qm}
+\begin{equation*}
+	W_{i\to f}=\frac{2\pi}{\hbar^2}|H_{fi}|^2\Delta_t\left(\frac{\epsilon_i-\epsilon_f}{\hbar}\right) \qquad \Delta_t(\omega)=\frac{t}{2\pi}\left(\frac{\sin\frac{\omega t}{2}}{\frac{\omega t}{2}}\right)^2
+\end{equation*}
+Fermis Goldene Regel für die Übergangsrate \cite[Glg. 5.81]{qm}
+\begin{equation*}
+	W_{i\to f} = \frac{2\pi}{\hbar}|H_{1,fi}|^2\delta(\epsilon_i-\epsilon_f)
+\end{equation*}
+Übergangsrate bei harmonischer Störung \cite[Glg. 5.88]{qm}
+\begin{equation*}
+    W_{i\to f} = \frac{2\pi}{\hbar}\left(|H_{1,fi}|^2\delta(\epsilon_f-\epsilon_i+\hbar\Omega)+|H^*_{1,fi}|^2\delta(\epsilon_f-\epsilon_i-\hbar\Omega)\right)
+\end{equation*}

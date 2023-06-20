@@ -1,0 +1,86 @@
+\section{Zeitentwicklung}
+
+Definition \cite[Glg. 3.2]{qm}
+\begin{equation*}
+    \ket{\psi(t)} = \hat{U}(t, t_0)\ket{\psi(t_0)}
+\end{equation*}
+Eigenschaften \cite[S. 56, Glg 3.3, 3.4]{qm}
+\begin{align*}
+	\hat{U}(t_0, t_0) &= 1 \ (\text{Kontinuität}) \\
+	\hat{U}(t, t_0)^\dagger &= \hat{U}(t, t_0)^{-1}=\hat{U}(t_0, t) \ (\text{Unitarität}) \\
+	\hat{U}(t_2, t_0) &= \hat{U}(t_2, t_1)\hat{U}(t_1, t_0) \ (\text{''Propagatoreigeschaft''})
+\end{align*}
+Taylorentwicklung \cite[Glg. 3.4]{qm}
+\begin{equation*}
+    \hat{U}(t+dt,t) = 1-\frac{i}{\hbar}\hat{H}(t)dt+\cdots
+\end{equation*}
+Schrödingergleichung für den Zeitentwicklungsoperator und den Zustand \cite[Glg. 3.5, 3.15]{qm}
+\begin{equation*}
+    i\hbar\frac{d}{dt}\hat{U}(t,t_0)=\hat{H}(t)\hat{U}(t,t_0) \qquad \Leftrightarrow \qquad  i\hbar\frac{d}{dt}\ket{\psi(t)}=\hat{H}\ket{\psi(t)}
+\end{equation*}
+Formale Lösung für kommutierende Hamiltonians ($[\hat{H}(t_1), \hat{H}(t_2)]=0$), Spektraldarstellung \cite[Glg. 3.9]{qm}
+\begin{equation*}
+    \hat{U}(t, t_0) = e^{-\frac{i}{\hbar}\int_{t_0}^t\hat{H}(\tau)d\tau} = \sum_n e^{-\frac{i}{\hbar}\int_{t_0}^tE_n(\tau)d\tau}\ketbra{\varphi_n}{\varphi_n}
+\end{equation*}
+Dysonscher Zeitordnungsoperator \cite[Glg. A.196]{qm}
+\begin{equation*}
+	\mathcal{T}\left(\hat{H}(t_1),\hat{H}(t_2)\right) = \begin{cases}
+		\hat{H}(t_1)\hat{H}(t_2) & t_1 \geq t_2 \\
+		\hat{H}(t_2)\hat{H}(t_1) & t_2 \geq t_1
+	\end{cases}
+\end{equation*}
+Von Neumannsche Reihe für den Zeitentwicklungsoperator bei nicht notwendigerweise kommutierenden Hamiltonoperatoren \cite[Glg. A.194]{qm}
+\begin{align*}
+	\hat{U}(t,t_0) &= \sum_{n=0}^\infty\left(\frac{-i}{\hbar}\right)^n\int_{t_0}^t\int_{t_0}^{t_1}\cdots\int_{t_0}^{t_{n-1}}\hat{H}(t_1)\cdots\hat{H}(t_n)dt_n\cdots dt_1 \\
+	&= \sum_{n=0}^\infty\frac{1}{n!}\left(\frac{-i}{\hbar}\right)^n\int_{t_0}^t\int_{t_0}^{t_1}\cdots\int_{t_0}^{t_{n-1}}\mathcal{T}\left(\hat{H}(t_1),\dots,\hat{H}(t_n)\right)dt_n\cdots dt_1 \\
+	&= \mathcal{T}e^{-\frac{i}{\hbar}\int_{t_0}^t\hat{H}(\tau)d\tau}
+\end{align*}
+
+\section{Hamiltonoperator}
+
+Hamiltonian = Energieobservable, Spektraldarstellung für kommutierende Hamiltonians ($[\hat{H}(t_1), \hat{H}(t_2)]=0$) \cite[Glg. 3.6]{qm}
+\begin{equation*}
+	E=\braket{\psi|\hat{H}|\psi} \qquad \hat{H}(t)=\sum_n E_n(t)\ketbra{\varphi_n}{\varphi_n}
+\end{equation*}
+Stationäre Schrödingergleichung \cite[3.36]{qm}
+\begin{equation*}
+    \hat{H}\ket{\varphi_n} = E_n\ket{\varphi_n}
+\end{equation*}
+Korrespondenzprinzip, wichtige Hamiltonians \cite[S. 59, Glg. 3.10-12]{qm}
+\begin{align*}
+	\hat{H} &= H(x\to\hat{Q},p\to\hat{P}) \\
+	\hat{H}(t) &= \frac{\hat{\vec{P}}^2}{2m}+\hat{V}(\hat{\vec{Q}},t) && \text{Teilchen im äußeren Potential} \\
+	\hat{H}(t) &= \frac{(\hat{P}-e\hat{\vec{A}})^2}{2m}+e\varphi(\hat{\vec{Q}},t) && \text{Geladenes Teilchen im äußeren elektromag. Feld} \\
+	\hat{H}(t) &= -\mu\hat{\vec{B}}\hat{\vec{S}} && \text{Neutrales Spin-$1/2$-Teilchen im Magnetfeld}
+\end{align*}
+Teilchen im äußeren Potential im Ortsraum \cite[Glg. 3.31]{qm}
+\begin{equation*}
+	i\hbar\frac{d}{dt}\psi(\vec{x},t) = \left(-\frac{\hbar^2}{2m}\vec{\nabla} + V(\vec{x},t)\right)\psi(\vec{x},t)
+\end{equation*}
+Zeitabhängigkeit von Erwartungswerten \cite[Glg. 3.42]{qm}
+\begin{equation*}
+    \frac{d}{dt}\braket{\hat{A}(t)} = \frac{i}{\hbar} \braket{[\hat{H}(t), \hat{A}(t)]} + \braket{\frac{d\hat{A}(t)}{dt}}
+\end{equation*}
+Hellman-Feynman-Theorem \cite[Kap. A.12.3]{qm}
+\begin{equation*}
+	\frac{d}{d\lambda}E_n(\lambda) = \braket{\varphi_n(\lambda) | \frac{d\hat{H}(\lambda)}{d\lambda} | \varphi_n(\lambda)}
+\end{equation*}
+
+\section{Heisenberg-Bild}
+
+Definition \cite[Glg. 3.46]{qm}
+\begin{equation*}
+    \ket{\psi^H(t)} = \ket{\psi^S(t_0)} \qquad \hat{O}^H(t) = \hat{U}^\dagger(t, t_0)\hat{O}^S\hat{U}(t, t_0)
+\end{equation*}
+Bewegungsgleichung \cite[Glg. 3.51]{qm}
+\begin{equation*}
+    \frac{d}{dt}\hat{Q}^H(t) = \hat{U}^\dagger(t, t_0)\left( \frac{i}{\hbar}[\hat{H}^S(t), \hat{O}^S(t)] + \frac{d}{dt}\hat{O}^S(t)\right) \hat{U}(t, t_0)
+\end{equation*}
+Newtonische Bewegungsgleichung für den Ortsoperator \cite[Glg. 3.55]{qm}
+\begin{equation*}
+    m\frac{d^2}{dt^2}\hat{\vec{X}}^H(t) = -\vec{\nabla}\hat{V}(\hat{\vec{X}}^H)
+\end{equation*}
+Ehrenfest-Theorem \cite[Glg. 3.56]{qm}
+\begin{equation*}
+    m\frac{d^2}{dt^2}\braket{\hat{\vec{X}}} = \braket{-\vec{\nabla}V(\hat{\vec{X}})}
+\end{equation*}

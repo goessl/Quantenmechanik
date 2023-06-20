@@ -1,0 +1,45 @@
+Hamiltonian \cite[Glg. 4.61, 4.65]{qm}
+\begin{equation*}
+	\hat{H} = \frac{1}{2m}\hat{P}^2+\frac{\omega^2 m}{2}\hat{Q}^2 = \hbar\omega\left(\hat{N}+\frac{1}{2}\right)
+\end{equation*}
+Leiteroperatoren (Erzeugungs- \& Vernichtungsoperator) \cite[Glg. 4.62]{qm}
+\begin{align*}
+	\hat{a}^\dagger &= \sqrt{\frac{m\omega}{2\hbar}}\left(\hat{Q}-i\frac{\hat{P}}{m\omega}\right) & \hat{a} &= \sqrt{\frac{m\omega}{2\hbar}}\left(\hat{Q}+i\frac{\hat{P}}{m\omega}\right) \\
+	\hat{Q} &= \sqrt{\frac{\hbar}{2m\omega}}\left(\hat{a}^\dagger+\hat{a}\right) & \hat{P} &= i\sqrt{\frac{\hbar m\omega}{2}}\left(\hat{a}^\dagger-\hat{a}\right)
+\end{align*}
+Anzahloperator \cite[Glg. 4.64, 4.75]{qm}
+\begin{equation*}
+	\hat{N} = \hat{a}^\dagger\hat{a} = \sum_{n\in\mathbb{N}_0} n\ketbra{n}{n}
+\end{equation*}
+Wirkung \cite[Glg. 4.72, 4.73, 4.75, 4.77]{qm}
+\begin{equation*}
+    \hat{a}^\dagger\ket{n}=\sqrt{n+1}\ket{n+1} \qquad \hat{a}\ket{n}=\sqrt{n}\ket{n-1} \qquad \hat{N}\ket{n}=n\ket{n} \qquad \ket{n}=\frac{(\hat{a}^\dagger)^n}{\sqrt{n!}}\ket{0}
+\end{equation*}
+Eigenschaften \cite[Glg. 4.66, 4.67]{qm}
+\begin{equation*}
+    [\hat{a}, \hat{a}^\dagger] = 1 \qquad [\hat{N}, \hat{a}^\dagger] = \hat{a}^\dagger \qquad [\hat{N}, \hat{a}] = -\hat{a}
+\end{equation*}
+Erwartungswerte \& charakteristische Skala \cite[Glg. 4.82, nach Glg. 4.79]{qm}
+\begin{align*}
+	\braket{n|\hat{Q}|n} &= 0 & \braket{n|(\Delta\hat{Q})^2|n} &= \frac{x_0^2}{2}(2n+1) & x_0 &= \sqrt{\frac{\hbar}{m\omega}} \\
+	\braket{n|\hat{P}|n} &= 0 & \braket{n|(\Delta\hat{P})^2|n} &= \frac{p_0^2}{2}(2n+1) & p_0 &= \sqrt{\hbar m\omega}
+\end{align*}
+Lösung im Ortsraum \cite[Glg. 4.86]{qm}
+\begin{itemize}
+    \item Hermite-Funktionen im Kapitel Wellenfunktionen
+\end{itemize}
+Mehrdimensionaler Harmonischer Oszillator \cite[Kap. 4.4.6]{nolting51}
+\begin{equation*}
+    \hat{H}=\sum_j\hat{H}_j \qquad E_{\vec{n}}=\sum_jE_{n_j} \qquad \ket{\vec{n}}=\prod_j\ket{n_j}\qquad \text{(separierbar)}
+\end{equation*}
+
+\section{Kohärente Zustände}
+
+Definition \cite[Glg. 4.95, 4.97]{qm}
+\begin{equation*}
+    \hat{a}\ket{\lambda}=\lambda\ket{\lambda} \qquad \Leftrightarrow \qquad \bra{\lambda}\hat{a}^\dagger=\bra{\lambda}\lambda^*
+\end{equation*}
+Darstellung \cite[Glg. 4.96]{qm}
+\begin{equation*}
+    \ket{\lambda} = e^{\frac{-|\lambda|^2}{2}} \sum_{n\in\mathbb{N}_0}\frac{\lambda^n}{\sqrt{n!}}\ket{n}
+\end{equation*}
